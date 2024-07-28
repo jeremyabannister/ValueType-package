@@ -1,23 +1,75 @@
 // swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
 
+///
 import PackageDescription
 
+
+///
 let package = Package(
     name: "ValueType-package",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
+        
+        ///
         .library(
-            name: "ValueType-package",
-            targets: ["ValueType-package"]),
+            name: "ValueType-module",
+            targets: ["ValueType-module"]
+        ),
+        
+        ///
+        .library(
+            name: "ValueTypeTestToolkit",
+            targets: ["ValueTypeTestToolkit"]
+        ),
+    ],
+    dependencies: [
+        
+        ///
+        .package(
+            url: "https://github.com/jeremyabannister/ExpressionErgonomics",
+            "0.4.1" ..< "0.5.0"
+        ),
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        
+        ///
         .target(
-            name: "ValueType-package"),
+            name: "ValueType-module",
+            dependencies: [
+                "ExpressionErgonomics",
+            ]
+        ),
+        
+        ///
+        .target(
+            name: "ValueTypeTestToolkit",
+            dependencies: [
+                
+                ///
+                .product(
+                    name: "ExpressionErgonomicsTestToolkit",
+                    package: "ExpressionErgonomics"
+                ),
+                
+                ///
+                "ValueType-module",
+            ]
+        ),
+        
+        ///
         .testTarget(
-            name: "ValueType-packageTests",
-            dependencies: ["ValueType-package"]),
+            name: "ValueType-module-tests",
+            dependencies: [
+                "ValueType-module",
+                "ValueTypeTestToolkit",
+            ]
+        ),
+        
+        ///
+        .testTarget(
+            name: "ValueTypeTestToolkit-tests",
+            dependencies: [
+                "ValueTypeTestToolkit",
+            ]
+        ),
     ]
 )

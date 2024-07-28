@@ -1,0 +1,42 @@
+{
+  "originHash" : "7f59417ed2c095d2a7e317d11633f98e527ac0fbae8568f7bad049d28aaa909f",
+  "pins" : [
+    {
+      "identity" : "assertiontoolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/AssertionToolkit",
+      "state" : {
+        "revision" : "b0e7ae2121b12126bc6ff9f71bbfd057e5bb0f3f",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "errormessage-package",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/ErrorMessage-package",
+      "state" : {
+        "revision" : "153dc04ef5bc861b82ad802bb379de279097e342",
+        "version" : "0.1.1"
+      }
+    },
+    {
+      "identity" : "expressionergonomics",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/ExpressionErgonomics",
+      "state" : {
+        "revision" : "5888e0411a31da609949798ac610e5a34d027f3e",
+        "version" : "0.4.1"
+      }
+    },
+    {
+      "identity" : "xctesttoolkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jeremyabannister/XCTestToolkit",
+      "state" : {
+        "revision" : "00148bc6b05a17c92d3b500534ed8a9a8bfadbed",
+        "version" : "0.2.5"
+      }
+    }
+  ],
+  "version" : 3
+}
