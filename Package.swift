@@ -26,7 +26,7 @@ let package = Package(
         ///
         .package(
             url: "https://github.com/jeremyabannister/ExpressionErgonomics",
-            "0.4.3" ..< "0.5.0"
+            "0.4.4" ..< "0.5.0"
         ),
     ],
     targets: [
