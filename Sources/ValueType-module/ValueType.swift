@@ -6,4 +6,4 @@
 //
 
 ///
-public protocol ValueType: Hashable, ExpressionErgonomic { }
+public protocol ValueType: Hashable, ExpressionErgonomic, Sendable { }
